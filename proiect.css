@@ -1,0 +1,263 @@
+/* General styles for body and overlay */
+body {
+    background-image: url("poza.jpeg");
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures body takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay color */
+    z-index: -1; /* Place it behind content */
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: relative; /* Ensures it stays above the overlay */
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 0 0 5px #000;
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button-list li {
+    margin: 5px 10px;
+}
+
+.button-list a {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button-list a:hover {
+    background-color: #06294e;
+}
+
+.services-container {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-list li {
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #000;
+}
+
+.services-list li::before {
+    content: "•";
+    margin-right: 10px;
+    color: #007bff;
+}
+
+#translated-header {
+    text-shadow: 0 0 5px #000;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#translated-list {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.modal-form button:hover {
+    background-color: #06294e;
+}
+
+/* Notification styles */
+.notification {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.notification.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .button-list a {
+        padding: 8px 16px;
+    }
+
+    .services-list {
+        padding: 0 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .button-list a {
+        padding: 6px 12px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}

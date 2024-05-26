@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(184, 180, 180);
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    font-weight: bold;
+}
+
+header {
+    background-color: #b81e1e;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 0 0 5px #000;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    color: #b81e1e;
+}
+
+.button-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-list li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.button-list a {
+    text-decoration: none;
+    color: white;
+    background-color: #b81e1e;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button-list a:hover {
+    background-color: #3e0909;
+}
+
+.map-container {
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Media Queries pentru responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .button-list li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .button-list a {
+        display: block;
+        padding: 10px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}

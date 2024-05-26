@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Coman</title>
+    <link rel="stylesheet" href="proiect.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bine ați venit la Casa Coman</h1>
+    </header>
+    <div class="button-container">
+        <ul class="button-list">
+            <li><a href="about.html">Despre Noi</a></li>
+            <li><a href="rezervari.html">Rezervări</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="services-container">
+        <h2 id="translated-header">Ce vă punem la dispoziție:</h2>
+        <ul class="services-list" id="translated-list">
+            <li>5 camere spațioase</li>
+            <li>15 locuri de dormit</li>
+            <li>5 băi interioare + 1 baie exterioară</li>
+            <li>terasă cu loc pentru grătar și ceaun</li>
+            <li>loc de joacă pentru copii</li>
+            <li>loc de parcare</li>
+            <li>acces la bucătărie</li>
+            <li>acces la internet</li>
+            <li>loc de foc</li>
+            <li>24/7 asistență clienți</li>
+        </ul>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">Rezervare Nouă</div>
+            <form id="reservationForm" class="modal-form">
+                <label for="name">Nume</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Număr de Telefon</label>
+                <input type="tel" id="phone" name="phone" required>
+                <button type="submit" id="rezerva">Rezervă</button>
+            </form>
+        </div>
+    </div>
+    <script src="proiect.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+/* General styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-list {
+    list-style: none;
+    padding: 0;
+}
+
+.button-list li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.button-list a {
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button-list a:hover {
+    background-color: #45a049;
+}
+
+.services-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.services-container h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.services-list li {
+    padding: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Calendar styles */
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.fc-toolbar-title {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.fc-button-primary {
+    background-color: #4CAF50;
+    border: none;
+}
+
+.fc-button-primary:hover {
+    background-color: #45a049;
+}
+
+.fc-event {
+    background-color: #4CAF50;
+    border: none;
+}
+
+.fc-event:hover {
+    background-color: #45a049;
+}
+
+.fc-daygrid-event-dot {
+    border-color: #4CAF50;
+}
+
+.fc-daygrid-day-top {
+    color: #4CAF50;
+}
+
+.fc-highlight {
+    background-color: rgba(76, 175, 80, 0.3);
+}
+
+.fc-daygrid-day.fc-day-today {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid #4CAF50;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.modal-form button:hover {
+    background-color: #064209;
+}
+
+/* Notification styles */
+.notification {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.notification.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.fc-event {
+    font-size: 24px; /* Mai mare decât dimensiunea implicită */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .button-list li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .button-list a {
+        display: block;
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2em;
+    }
+
+    .fc-toolbar-title {
+        font-size: 1.2em;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    .modal-form input {
+        padding: 8px;
+    }
+
+    .modal-form button {
+        padding: 8px 16px;
+    }
+}

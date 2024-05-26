@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervări Casă de Vacanță</title>
+    <link rel="stylesheet" href="rezervari.css">
+    <!-- Include FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Rezervări Casa Coman</h1>
+    </header>
+    <div class="button-container">
+        <ul class="button-list">
+            <li><a href="index.html">Acasa</a></li>
+            <li><a href="about.html">Despre Noi</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div id="calendar"></div>
+
+    <!-- Modal HTML -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">Rezervare Nouă</div>
+            <form id="reservationForm" class="modal-form">
+                <label for="name">Nume</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Număr de Telefon</label>
+                <input type="tel" id="phone" name="phone" required>
+                <button type="submit" id = "rezerva">Rezervă</button>
+            </form>
+        </div>
+    </div>
+    <!-- <div>
+        <input type="text" id="inputText">
+        <button id="saveButton">Salvare</button>
+    </div> -->
+
+    <!-- Notification HTML -->
+    <div id="notification" class="notification">Rezervarea a fost efectuată cu succes!</div>
+
+    <!-- Include FullCalendar JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <!-- Include jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Firebase ESM -->
+    <script type="module" src="rezervari.js"></script>
+</body>
+
+</html>
